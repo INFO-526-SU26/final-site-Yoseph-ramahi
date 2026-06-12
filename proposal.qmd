@@ -1,8 +1,8 @@
 ---
-title: "Proposal title"
+title: "Pixar Films Analysis"
 subtitle: "Proposal"
 author: 
-  - name: "Team Name"
+  - name: "Yoseph Alramahi"
     affiliations:
       - name: "School of Information, University of Arizona"
 description: "Project description"
@@ -22,23 +22,32 @@ execute:
 #| label: load-pkgs
 #| message: false
 library(tidyverse)
+
+library(pixarfilms)
+pixar_films <- pixarfilms::pixar_films
+public_response <- pixarfilms::public_response
 ```
 
 ## Dataset
 
 ```{r}
-#| label: load-dataset
-#| message: false
+nrow(pixar_films)
+ncol(pixar_films)
 ```
 
 A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.
 
 Make sure to load the data and use inline code for some of this information.
 
-## Questions
+The Pixar Films data set from Tidy Tuesday 2025 contains information about Pixar movies, including genres, run times, budgets, box office revenue, and ratings. The data set contains r nrow(pixar_films) movies and r ncol(pixar_films) variables. I chose this data set because I enjoy Pixar movies and the data is well suited for creating visualizations and exploring trends.
 
-The two questions you want to answer.
+# Questions
 
-## Analysis plan
+How do Pixar movie ratings vary across genres and release years?
 
--   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+How do budget and run time relate to box office revenue across different pixar genres ?
+
+# Analysis plan
+
+-  i will analyze how movie ratings very across genres and release years. The variables used will include genre, release year, IMDb rating, and rotten tomatoes score. I plan to create visualizations that compare ratings across genres and examine trends over time.
+- i will examine how budget and run time are related to box office revenue across different pixar movies genres i will use scatter plots to look for patterns in the data.
